@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../models/exercise.dart';
-import '../models/workout_session.dart';
-import '../widgets/content_frame.dart';
+import 'package:dopa_mine/models/exercise.dart';
+import 'package:dopa_mine/models/workout_session.dart';
+import 'package:dopa_mine/widgets/content_frame.dart';
 
 class ReportScreen extends StatefulWidget {
   const ReportScreen({

@@ -1,9 +1,8 @@
+import 'package:dopa_mine/models/exercise.dart';
+import 'package:dopa_mine/providers/workout_provider.dart';
+import 'package:dopa_mine/screens/session_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../models/exercise.dart';
-import '../providers/workout_provider.dart';
-import 'session_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

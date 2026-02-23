@@ -1,4 +1,4 @@
-import '../models/exercise.dart';
+import 'package:dopa_mine/models/exercise.dart';
 
 const List<Exercise> kDefaultExercises = <Exercise>[
   Exercise(

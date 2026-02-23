@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 
-import '../data/exercise_seed.dart';
-import '../models/exercise.dart';
-import '../models/workout_session.dart';
-import '../services/session_repository.dart';
+import 'package:dopa_mine/data/exercise_seed.dart';
+import 'package:dopa_mine/models/exercise.dart';
+import 'package:dopa_mine/models/workout_session.dart';
+import 'package:dopa_mine/services/session_repository.dart';
 
 class WorkoutProvider extends ChangeNotifier {
   WorkoutProvider({required SessionRepository sessionRepository})

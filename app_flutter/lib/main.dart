@@ -1,12 +1,11 @@
 import 'dart:io';
 
+import 'package:dopa_mine/providers/workout_provider.dart';
+import 'package:dopa_mine/screens/home_screen.dart';
+import 'package:dopa_mine/services/session_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:window_manager/window_manager.dart';
-
-import 'providers/workout_provider.dart';
-import 'screens/home_screen.dart';
-import 'services/session_repository.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,13 +1,12 @@
 import 'dart:async';
 
+import 'package:dopa_mine/models/exercise.dart';
+import 'package:dopa_mine/models/workout_session.dart';
+import 'package:dopa_mine/providers/workout_provider.dart';
+import 'package:dopa_mine/screens/report_screen.dart';
+import 'package:dopa_mine/widgets/content_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../models/exercise.dart';
-import '../models/workout_session.dart';
-import '../providers/workout_provider.dart';
-import '../widgets/content_frame.dart';
-import 'report_screen.dart';
 
 class SessionScreen extends StatefulWidget {
   const SessionScreen({super.key});

@@ -1,4 +1,4 @@
-import '../models/workout_session.dart';
+import 'package:dopa_mine/models/workout_session.dart';
 
 abstract class SessionRepository {
   Future<WorkoutSession> saveSession(WorkoutSession session);
