@@ -65,7 +65,7 @@ class _SessionScreenState extends State<SessionScreen> {
         builder: (_) => ReportScreen(
           exercise: exercise,
           session: session,
-          points: exercise.metPoints,
+          points: session.pointsAwarded,
         ),
       ),
     );

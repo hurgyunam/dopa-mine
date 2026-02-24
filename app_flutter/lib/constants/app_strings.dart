@@ -3,6 +3,13 @@ class AppStrings {
 
   static const String homeHeadline = '오늘의 작은 움직임';
   static const String homeDescription = '운동 1개를 선택하면 바로 시작할 수 있어요.';
+  static const String historyHeadline = '운동 이력';
+  static const String historyLoading = '이력을 불러오는 중...';
+  static const String historyEmpty = '아직 저장된 운동 이력이 없어요.';
+  static const String historyTotalSessionsPrefix = '누적 완료: ';
+  static const String historyTotalSessionsSuffix = '회';
+  static const String historyTotalPointsPrefix = '누적 포인트: +';
+  static const String historyRecentItemPrefix = '최근: ';
   static const String startWorkout = '운동 시작';
 
   static const String sessionTitle = '세션';

@@ -6,6 +6,7 @@ class WorkoutSession {
     required this.duration,
     required this.repetitionCount,
     required this.isCompleted,
+    required this.pointsAwarded,
   });
 
   final String id;
@@ -14,4 +15,5 @@ class WorkoutSession {
   final Duration duration;
   final int repetitionCount;
   final bool isCompleted;
+  final int pointsAwarded;
 }
