@@ -1,3 +1,10 @@
 #!/bin/sh
+set -eu
+
+dart run tools/check_lf_line_endings.dart
+dart run tools/sync_docs_todo_progress.dart
+git add docs/TODO.md
 
 dart run tools/check_navigation_routes_sync.dart
+dart run tools/check_project_state_sync.dart
+dart run tools/check_todo_progress_sync.dart

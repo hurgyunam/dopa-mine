@@ -37,6 +37,9 @@ Future<void> main() async {
     stderr.writeln(
       'navigation-route-check: `$kNavigationDocPath`를 함께 수정해 주세요.',
     );
+    stderr.writeln(
+      'navigation-route-check: 조치 가이드 -> 문서 수정 후 `git add $kNavigationDocPath`',
+    );
     stderr.writeln('navigation-route-check: 스테이징 파일 목록');
     for (final String path in stagedFiles) {
       stderr.writeln('- $path');

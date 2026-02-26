@@ -24,15 +24,11 @@
 
 ### 로컬 훅 설치
 ```bash
-powershell -ExecutionPolicy Bypass -File tools/install_navigation_hook.ps1
+cp .githooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
 ```
 
-```bash
-sh tools/install_navigation_hook.sh
-```
-
-```bash
-make nav-hook-install
+```powershell
+Copy-Item .githooks/pre-commit .git/hooks/pre-commit -Force
 ```
 
 ### 수동 검증 실행
@@ -57,6 +53,8 @@ make nav-check
 ## 변경 이력
 | 날짜 | 변경 요약 | 작성자 |
 | --- | --- | --- |
+| 2026-02-26 | pre-commit 실행 최소 구성으로 정리하고 훅 설치 전용 스크립트 참조를 제거 | @owner |
+| 2026-02-26 | 훅 설치 로직을 Dart 단일 스크립트로 통합하고 OS별 래퍼는 Dart 호출만 수행하도록 정리 | @owner |
 | 2026-02-24 | macOS/Linux 훅 설치 스크립트 및 Makefile 실행 경로 추가, Dart 선택 기준 명시 | @owner |
 | 2026-02-24 | 라우트 문서 동기화 자동 검증 스크립트/훅 설치 절차 추가 | @owner |
 | 2026-02-24 | 이동 루트 레지스트리 문서 신설 및 자동 동기화 정책 추가 | @owner |

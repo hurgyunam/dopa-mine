@@ -11,7 +11,7 @@
 - `docs/README.md`: 문서 인덱스와 우선순위
 - `docs/TODO.md`: 문서 정비 작업 목록
 - `docs/todo/`: 에픽별 상세 TODO (`01_supabase_persistence.md` 등)
-- `docs/context/`: 프로젝트 상태/완료 기준 (`01_project_state.md`, `02_done_definition.md`)
+- `docs/context/`: 프로젝트 상태/완료 기준/도구 인벤토리 (`01_project_state.md`, `02_done_definition.md`, `03_tools_inventory.md`)
 - `docs/product/`: 용어 표준, 유스케이스, 도메인 스펙, 도메인 해설
 - `docs/design/`: UI/UX 가이드
 - `docs/architecture/`: API 및 시스템 설계 초안, 환경 변수 정책, 이동 루트/저장 계층 설계 (`02_env_policy.md`, `03_navigation_routes.md`, `04_persistence_design.md`)
@@ -35,20 +35,21 @@
 ## 3) 권장 읽기 순서
 1. `docs/context/01_project_state.md`
 2. `docs/context/02_done_definition.md`
-3. `.cursor/rules/architecture-ddd.mdc`
-4. `docs/product/01_glossary.md`
-5. `docs/product/02_use_cases.md`
-6. `docs/product/03_core_spec.md`
-7. `docs/product/04_domain_guide.md`
-8. `docs/design/01_ui_design.md`
-9. `docs/architecture/01_api_design.md`
-10. `docs/architecture/02_env_policy.md`
-11. `docs/architecture/03_navigation_routes.md`
-12. `docs/architecture/04_persistence_design.md`
-13. `docs/issues/README.md`
-14. `docs/issues/ISSUES.md`
-15. `docs/TODO.md`
-16. `docs/todo/01_supabase_persistence.md`
+3. `docs/context/03_tools_inventory.md`
+4. `.cursor/rules/architecture-ddd.mdc`
+5. `docs/product/01_glossary.md`
+6. `docs/product/02_use_cases.md`
+7. `docs/product/03_core_spec.md`
+8. `docs/product/04_domain_guide.md`
+9. `docs/design/01_ui_design.md`
+10. `docs/architecture/01_api_design.md`
+11. `docs/architecture/02_env_policy.md`
+12. `docs/architecture/03_navigation_routes.md`
+13. `docs/architecture/04_persistence_design.md`
+14. `docs/issues/README.md`
+15. `docs/issues/ISSUES.md`
+16. `docs/TODO.md`
+17. `docs/todo/01_supabase_persistence.md`
 
 ## 4) 문서 작성/운영 규칙 위치
 - 문서 작성 규칙, 동기화 체크리스트, 변경 이력 정책, 릴리즈 문서 검토 프로세스의 단일 기준 문서는 `docs/rules/01_docs_writing.md`다.

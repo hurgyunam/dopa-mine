@@ -1,14 +1,13 @@
-.PHONY: nav-check nav-hook-install todo-sync
+.PHONY: nav-check state-check todo-check todo-sync
 
 nav-check:
 	dart run tools/check_navigation_routes_sync.dart
 
-nav-hook-install:
-ifeq ($(OS),Windows_NT)
-	powershell -ExecutionPolicy Bypass -File tools/install_navigation_hook.ps1
-else
-	sh tools/install_navigation_hook.sh
-endif
+state-check:
+	dart run tools/check_project_state_sync.dart
+
+todo-check:
+	dart run tools/check_todo_progress_sync.dart
 
 todo-sync:
 	dart run tools/sync_docs_todo_progress.dart

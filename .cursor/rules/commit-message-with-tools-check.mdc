@@ -1,0 +1,28 @@
+---
+description: Run tools checks before commit message suggestions
+alwaysApply: true
+---
+
+# Commit Message Recommendation with Tools Check
+
+사용자가 "커밋 메시지 추천"을 요청하면, 메시지 제안 전에 `tools` 검증 스크립트를 먼저 실행한다.
+
+## 실행 규칙
+
+1. 먼저 `git status --short`, `git diff`, `git log --oneline -12`로 변경 범위와 기존 메시지 스타일을 확인한다.
+2. 아래 스크립트가 존재하면 순서대로 실행한다.
+   - `dart run tools/check_lf_line_endings.dart`
+   - `dart run tools/check_navigation_routes_sync.dart`
+   - `dart run tools/check_project_state_sync.dart`
+   - `dart run tools/check_todo_progress_sync.dart`
+3. 스크립트 실행 결과를 답변에 반드시 포함한다.
+   - 성공/스킵: 어떤 점검이 통과(또는 SKIP)되었는지 간단히 요약
+   - 실패: 실패한 스크립트, 핵심 에러 원인, 사용자가 바로 실행할 조치 1개
+4. 점검 결과를 반영해 커밋 단위를 제안하고, 각 단위에 맞는 커밋 메시지(why 중심)를 추천한다.
+5. 사용자가 요청하면 첫 커밋 대상만 `git add` 한다.
+
+## 응답 형식
+
+- `검증 상태`: 스크립트별 OK/SKIP/FAIL
+- `권장 커밋 단위`: 1개 또는 여러 개
+- `추천 커밋 메시지`: prefix(`feat|fix|refactor|test|docs|chore`) 포함
