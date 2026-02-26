@@ -10,10 +10,11 @@
 ## 1) 폴더 구조
 - `docs/README.md`: 문서 인덱스와 운영 규칙
 - `docs/TODO.md`: 문서 정비 작업 목록
+- `docs/todo/`: 에픽별 상세 TODO (`01_supabase_persistence.md` 등)
 - `docs/context/`: 프로젝트 상태/완료 기준 (`01_project_state.md`, `02_done_definition.md`)
 - `docs/product/`: 용어 표준, 유스케이스, 도메인 스펙, 도메인 해설
 - `docs/design/`: UI/UX 가이드
-- `docs/architecture/`: API 및 시스템 설계 초안, 환경 변수 정책, 이동 루트 레지스트리 (`02_env_policy.md`, `03_navigation_routes.md`)
+- `docs/architecture/`: API 및 시스템 설계 초안, 환경 변수 정책, 이동 루트/저장 계층 설계 (`02_env_policy.md`, `03_navigation_routes.md`, `04_persistence_design.md`)
 - `docs/rules/`: 아키텍처/개발 규칙
 - `docs/issues/`: 채팅별 이슈 로그와 통합 인덱스 (`README.md`, `ISSUES.md`, `CHAT_*.md`)
 
@@ -43,9 +44,11 @@
 9. `docs/architecture/01_api_design.md`
 10. `docs/architecture/02_env_policy.md`
 11. `docs/architecture/03_navigation_routes.md`
-12. `docs/issues/README.md`
-13. `docs/issues/ISSUES.md`
-14. `docs/TODO.md`
+12. `docs/architecture/04_persistence_design.md`
+13. `docs/issues/README.md`
+14. `docs/issues/ISSUES.md`
+15. `docs/TODO.md`
+16. `docs/todo/01_supabase_persistence.md`
 
 ## 4) 작성 규칙
 - `docs` 루트에는 `README.md`, `TODO.md`만 둔다.
