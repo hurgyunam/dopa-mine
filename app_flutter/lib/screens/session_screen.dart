@@ -48,34 +48,46 @@ class _SessionScreenState extends State<SessionScreen> {
     });
   }
 
-  void _previewReport(Exercise exercise) {
+  Future<void> _completeAndMoveToReport(
+    BuildContext context,
+    WorkoutProvider provider,
+    Exercise exercise,
+  ) async {
     final Duration duration = _elapsed == Duration.zero
         ? const Duration(minutes: 1, seconds: 20)
         : _elapsed;
     final int repetitionCount = _repetitionCount == 0
         ? exercise.targetCount
         : _repetitionCount;
-    final int points = (repetitionCount + duration.inSeconds ~/ 30).clamp(1, 99);
-    final DateTime now = DateTime.now();
-    final WorkoutSession previewSession = WorkoutSession(
-      id: 'preview-${now.microsecondsSinceEpoch}',
-      exerciseId: exercise.id,
-      startTime: now.subtract(duration),
-      duration: duration,
-      repetitionCount: repetitionCount,
-      isCompleted: true,
-      pointsAwarded: points,
-    );
+    try {
+      final WorkoutSession savedSession = await provider.completeSession(
+        duration: duration,
+        repetitionCount: repetitionCount,
+        isCompleted: true,
+      );
 
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute<void>(
-        builder: (_) => ReportScreen(
-          exercise: exercise,
-          session: previewSession,
-          points: points,
+      if (!context.mounted) {
+        return;
+      }
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute<void>(
+          builder: (_) => ReportScreen(
+            exercise: exercise,
+            session: savedSession,
+            points: savedSession.pointsAwarded,
+          ),
         ),
-      ),
-    );
+      );
+    } catch (_) {
+      if (!context.mounted) {
+        return;
+      }
+      final String message =
+          provider.lastSaveErrorMessage ?? '저장에 실패했습니다. 잠시 후 다시 시도해주세요.';
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(message)));
+    }
   }
 
   @override
@@ -213,8 +225,22 @@ class _SessionScreenState extends State<SessionScreen> {
                 width: double.infinity,
                 height: AppLayout.bottomButtonHeight,
                 child: FilledButton(
-                  onPressed: () => _previewReport(exercise),
-                  child: const Text(AppStrings.previewReport),
+                  onPressed: provider.isSaving
+                      ? null
+                      : () => _completeAndMoveToReport(
+                            context,
+                            provider,
+                            exercise,
+                          ),
+                  child: provider.isSaving
+                      ? const SizedBox(
+                          width: AppLayout.loadingIndicatorSize,
+                          height: AppLayout.loadingIndicatorSize,
+                          child: CircularProgressIndicator(
+                            strokeWidth: AppLayout.loadingIndicatorStrokeWidth,
+                          ),
+                        )
+                      : const Text(AppStrings.completeWorkout),
                 ),
               ),
             ),
