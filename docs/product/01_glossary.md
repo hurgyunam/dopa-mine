@@ -16,6 +16,8 @@
 - 코드/모델/저장소 명칭은 `Session`을 기본으로 사용한다.
 - 문서에서 코드 식별자를 직접 언급할 때는 백틱 표기(`Session`, `repetitionCount`)를 사용한다.
 - 하나의 문서 안에서 동일 개념을 다른 용어로 혼용하지 않는다.
+- 저장/API 문맥에서는 `Session`의 저장 엔티티 표기를 `WorkoutSession`, `SessionExercise`, `RepetitionLog`로 사용한다.
+- 저장 엔티티의 상세 매핑과 관계 설명은 `docs/architecture/01_api_design.md`를 기준으로 한다.
 
 ## 3) 적용 범위
 - 대상 문서: `docs/product/*`, `docs/context/*`, `docs/design/*`, 루트 `README.md`
@@ -24,4 +26,5 @@
 ## 변경 이력
 | 날짜 | 변경 요약 | 작성자 |
 | --- | --- | --- |
+| 2026-02-26 | `Session` 용어의 저장/API 명명 대응(`WorkoutSession` 등) 및 참조 문서 규칙 추가 | @cursor-agent |
 | 2026-02-24 | 변경 이력 정책 섹션 도입 | @owner |

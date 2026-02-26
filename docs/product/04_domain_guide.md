@@ -12,6 +12,13 @@
 - `Session`은 실제 수행 이력 데이터다. (무엇을 했는지)
 - 관계는 `Exercise` 1 : N `Session`이다.
 - 각 `Session`은 정확히 하나의 `Exercise`를 참조한다.
+- 저장 모델 관점에서는 `WorkoutSession -> SessionExercise`가 `1:N`, `SessionExercise -> RepetitionLog`가 `1:N`이다.
+- `WorkoutSession`의 `RepetitionLog` 개수는 하위 `SessionExercise`들의 로그 수 합으로 결정된다.
+
+### 2-1) 문서 간 명명 대응
+- 제품/도메인 문서에서는 상위 개념을 `Session`으로 표기한다.
+- 저장/API 문서(`docs/architecture/01_api_design.md`)에서는 저장 엔티티를 `WorkoutSession`, `SessionExercise`, `RepetitionLog`로 구체화해 표기한다.
+- 두 표기는 동일 도메인(`Session`)의 추상/구현 레벨 차이이며, 의미 충돌로 해석하지 않는다.
 
 ## 3) 문서 역할 분리
 - `01_glossary.md`: 용어 정의와 표기 원칙
@@ -26,4 +33,5 @@
 ## 변경 이력
 | 날짜 | 변경 요약 | 작성자 |
 | --- | --- | --- |
+| 2026-02-26 | 저장 모델 관계(`1:N`, `1:N`, 합계 기준) 및 API 문서 명명 대응 규칙 추가 | @cursor-agent |
 | 2026-02-24 | 변경 이력 정책 섹션 도입 | @owner |
