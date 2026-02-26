@@ -10,7 +10,7 @@
 ## 1) 폴더 구조
 - `docs/README.md`: 문서 인덱스와 운영 규칙
 - `docs/TODO.md`: 문서 정비 작업 목록
-- `docs/context/`: 프로젝트 상태 요약 및 전환 전략 (`01_project_state.md`)
+- `docs/context/`: 프로젝트 상태/완료 기준 (`01_project_state.md`, `02_done_definition.md`)
 - `docs/product/`: 용어 표준, 유스케이스, 도메인 스펙, 도메인 해설
 - `docs/design/`: UI/UX 가이드
 - `docs/architecture/`: API 및 시스템 설계 초안, 이동 루트 레지스트리 (`02_navigation_routes.md`)
@@ -20,6 +20,7 @@
 - 파일명 접두사 규칙: 숫자가 작을수록 우선순위가 높다. (예: `01_` > `02_`)
 - 전역 Source of Truth는 이 섹션의 우선순위 체계를 따른다.
 - 프로젝트 현재 상태/전환 기준은 `docs/context/01_project_state.md`를 우선 기준으로 따른다.
+- 프로젝트 완료/출시 가능 판정 기준은 `docs/context/02_done_definition.md`를 따른다.
 - 용어/표기 기준은 `docs/product/01_glossary.md`를 별도 기준으로 따른다.
 - 1순위: `docs/context/01_project_state.md`
 - 2순위: `docs/rules/01_ddd_convention.md`
@@ -31,15 +32,16 @@
 
 ## 3) 권장 읽기 순서
 1. `docs/context/01_project_state.md`
-2. `docs/rules/01_ddd_convention.md`
-3. `docs/product/01_glossary.md`
-4. `docs/product/02_use_cases.md`
-5. `docs/product/03_core_spec.md`
-6. `docs/product/04_domain_guide.md`
-7. `docs/design/01_ui_design.md`
-8. `docs/architecture/01_api_design.md`
-9. `docs/architecture/02_navigation_routes.md`
-10. `docs/TODO.md`
+2. `docs/context/02_done_definition.md`
+3. `docs/rules/01_ddd_convention.md`
+4. `docs/product/01_glossary.md`
+5. `docs/product/02_use_cases.md`
+6. `docs/product/03_core_spec.md`
+7. `docs/product/04_domain_guide.md`
+8. `docs/design/01_ui_design.md`
+9. `docs/architecture/01_api_design.md`
+10. `docs/architecture/02_navigation_routes.md`
+11. `docs/TODO.md`
 
 ## 4) 작성 규칙
 - `docs` 루트에는 `README.md`, `TODO.md`만 둔다.

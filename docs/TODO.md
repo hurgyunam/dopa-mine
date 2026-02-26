@@ -1,7 +1,7 @@
 # Docs TODO
 
 문서 정합성과 유지보수성을 높이기 위한 작업 목록입니다.
-마지막 업데이트: 2026-02-24
+마지막 업데이트: 2026-02-26
 
 ## P0 (즉시 반영)
 - [x] `docs/README.md` 생성 (문서 인덱스/우선순위/읽기 순서 정의)
@@ -20,7 +20,9 @@
   - [x] 산출물 반영 완료 (용어 매핑 표 1개 + 루트 `README.md` 섹션 2/3/5 동기화 + 검토 체크리스트)
 - [x] 포인트 계산식 상세 규칙을 `docs/product/03_core_spec.md`에 수식 수준으로 확정
 - [x] 세션 복구 정책(백그라운드/앱 종료)을 `docs/product/02_use_cases.md`와 구현 기준으로 연결
-- [ ] `docs/architecture/01_api_design.md`에 인증/에러 응답 바디 표준 확정
+- [x] `docs/architecture/01_api_design.md`에 인증/에러 응답 바디 표준 확정
+- [x] 프로젝트 완료 기준 문서 신설 (`docs/context/02_done_definition.md`) 및 `docs/README.md` 읽기 순서/구조 동기화
+- [x] 버튼/입력 기반 QA 체크리스트 템플릿 신설 (`docs/release/QA_CHECKLIST_TEMPLATE.md`) 및 릴리즈 체크리스트 연동
 - [ ] Supabase 저장 작업 정의/구현
   - [ ] `docs/architecture/01_api_design.md`에 저장 대상 엔티티/필드 매핑 표 추가 (`WorkoutSession`, `SessionExercise`, `RepetitionLog` 기준)
   - [ ] `docs/product/03_core_spec.md`에 저장 트리거 시점 확정 (세트 완료/세션 완료/앱 종료 직전)
@@ -53,6 +55,20 @@
   - [ ] 딥링크 사전 점검 절차 문서화 (Android `adb`, iOS `simctl`로 앱 호출 테스트)
   - [ ] 플레이스토어 등록 전 단계에서도 딥링크/소셜 로그인 개발·테스트 가능 가이드 명시
   - [ ] QA 체크리스트 작성 (신규 로그인, 재로그인, 토큰 만료 복구, 로그아웃 이후 접근 차단)
+- [ ] 강제 업데이트 기능 정의/구현 (Supabase DB 버전 통제)
+  - [ ] 버전 통제 데이터 모델 확정 (`app_version_policies` 테이블: `platform`, `latest_version`, `min_supported_version`, `force_update`, `store_url`, `updated_at`)
+  - [ ] 버전 비교 규칙 확정 (SemVer 기준, prerelease/build 메타데이터 처리 범위 문서화)
+  - [ ] Supabase RLS/권한 정책 확정 (클라이언트 read-only, 운영자/서비스 롤만 update 가능)
+  - [ ] 앱 버전 체크 API/조회 계약 확정 (`GET /app-version-policy?platform=android|ios`)
+  - [ ] `docs/architecture/01_api_design.md`에 버전 체크 요청/응답 스키마 및 에러 코드 추가
+  - [ ] 앱 시작 시 버전 체크 플로우 정의 (splash -> policy fetch -> 강제 업데이트 여부 판정 -> 라우팅)
+  - [ ] 강제 업데이트 UX 정책 확정 (뒤로가기 차단 여부, 재시도 버튼, 점검 메시지 템플릿)
+  - [ ] 선택 업데이트 UX 정책 확정 (`latest_version` 안내, "나중에" 허용 조건)
+  - [ ] 스토어 URL 분기 정책 확정 (Android Play Store / iOS App Store 링크 관리 책임)
+  - [ ] 버전 정책 캐시/재검증 주기 정의 (앱 재실행, 포그라운드 복귀 시점)
+  - [ ] 장애 대응 정책 문서화 (버전 체크 API 실패 시 fail-open vs fail-close 기준)
+  - [ ] 운영 가이드 작성 (긴급 강제 업데이트 배포 절차, 롤백 절차, 변경 이력 관리)
+  - [ ] QA 체크리스트 작성 (구버전 차단, 최신버전 통과, 네트워크 오류, 정책 변경 즉시 반영)
 - [ ] Google Play 스토어 출시 절차 정의/실행
   - [ ] Google Play Console 앱 생성 및 패키지명/앱명 확정
   - [ ] 릴리즈 키스토어 및 업로드 키 관리 정책 확정 (백업/권한/복구 절차 포함)
