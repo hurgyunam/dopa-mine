@@ -15,6 +15,7 @@
 - `docs/design/`: UI/UX 가이드
 - `docs/architecture/`: API 및 시스템 설계 초안, 이동 루트 레지스트리 (`02_navigation_routes.md`)
 - `docs/rules/`: 아키텍처/개발 규칙
+- `docs/issues/`: 채팅별 이슈 로그와 통합 인덱스 (`README.md`, `ISSUES.md`, `CHAT_*.md`)
 
 ## 2) 문서 우선순위 (Source of Truth)
 - 파일명 접두사 규칙: 숫자가 작을수록 우선순위가 높다. (예: `01_` > `02_`)
@@ -41,7 +42,9 @@
 8. `docs/design/01_ui_design.md`
 9. `docs/architecture/01_api_design.md`
 10. `docs/architecture/02_navigation_routes.md`
-11. `docs/TODO.md`
+11. `docs/issues/README.md`
+12. `docs/issues/ISSUES.md`
+13. `docs/TODO.md`
 
 ## 4) 작성 규칙
 - `docs` 루트에는 `README.md`, `TODO.md`만 둔다.
