@@ -5,7 +5,8 @@
 
 ## 규칙 (간단)
 - 채팅 1개 = 파일 1개
-- 파일명: `CHAT_YYYY-MM-DD_<topic>.md`
+- 파일명: `CHAT_YYYY-MM-DD_HH-mm_<topic>.md`
+- 시각은 KST 실제 생성 시각 기준으로 기록한다.
 - 통합 인덱스: `ISSUES.md` (링크만 관리)
 - 각 `CHAT_*.md` 마지막에 `## 취합용 요약` 섹션을 반드시 추가
 - `취합용 요약`은 3줄 고정: `결론`, `AI 제안 핵심`, `사용자 결정 핵심`
@@ -13,7 +14,7 @@
 
 ## 채팅 문서 최소 양식
 ```md
-# Chat Log - YYYY-MM-DD - <topic>
+# Chat Log - YYYY-MM-DD HH:mm - <topic>
 
 ## 왜 기록하나
 - AI 제안과 사용자 결정을 구분해 남긴다.

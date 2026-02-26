@@ -1,4 +1,4 @@
-.PHONY: nav-check nav-hook-install
+.PHONY: nav-check nav-hook-install todo-sync
 
 nav-check:
 	dart run tools/check_navigation_routes_sync.dart
@@ -9,3 +9,6 @@ ifeq ($(OS),Windows_NT)
 else
 	sh tools/install_navigation_hook.sh
 endif
+
+todo-sync:
+	dart run tools/sync_docs_todo_progress.dart
