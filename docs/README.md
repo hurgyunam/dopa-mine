@@ -10,7 +10,7 @@
 ## 1) 폴더 구조
 - `docs/README.md`: 문서 인덱스와 우선순위
 - `docs/TODO.md`: 문서 정비 작업 목록
-- `docs/todo/`: 에픽별 상세 TODO (`01_supabase_persistence.md` 등)
+- `docs/todo/`: 에픽별 상세 TODO (`01_supabase_persistence.md`, `02_social_login.md`, `07_ios_release_apple_login.md` 등)
 - `docs/context/`: 프로젝트 상태/완료 기준/도구 인벤토리 (`01_project_state.md`, `02_done_definition.md`, `03_tools_inventory.md`)
 - `docs/product/`: 용어 표준, 유스케이스, 도메인 스펙, 도메인 해설
 - `docs/design/`: UI/UX 가이드
@@ -50,6 +50,8 @@
 15. `docs/issues/ISSUES.md`
 16. `docs/TODO.md`
 17. `docs/todo/01_supabase_persistence.md`
+18. `docs/todo/02_social_login.md`
+19. `docs/todo/07_ios_release_apple_login.md`
 
 ## 4) 문서 작성/운영 규칙 위치
 - 문서 작성 규칙, 동기화 체크리스트, 변경 이력 정책, 릴리즈 문서 검토 프로세스의 단일 기준 문서는 `docs/rules/01_docs_writing.md`다.

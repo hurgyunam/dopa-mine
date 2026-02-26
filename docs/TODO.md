@@ -10,8 +10,9 @@
   - next_action: 항목 추가 후 가장 가까운 작업 사이클에서 P1/P2/P3 본 목록으로 이동한다
 
 ## P1 (다음 정비)
-- [ ] Supabase 저장 작업 정의/구현 (진행중, 8/12 완료) (`docs/todo/01_supabase_persistence.md`)
-- [ ] 소셜 로그인 작업 정의/구현 (대기, 0/19 완료) (`docs/todo/02_social_login.md`)
+- 목표: Android 출시 + Google 소셜 로그인까지 1차 릴리즈 범위 완료
+- [ ] Supabase 저장 작업 정의/구현 (진행중, 8/9 완료) (`docs/todo/01_supabase_persistence.md`)
+- [ ] 소셜 로그인 작업 정의/구현 (Google 우선, 대기, 0/19 완료) (`docs/todo/02_social_login.md`)
 - [ ] 강제 업데이트 기능 정의/구현 (대기, 0/13 완료) (`docs/todo/03_force_update.md`)
 - [ ] Google Play 스토어 출시 절차 정의/실행 (대기, 0/12 완료) (`docs/todo/04_play_store_release.md`)
 
@@ -22,6 +23,10 @@
 
 ## P3 (2차 추가 과제)
 - [ ] 오프라인 큐/재동기화 확장 (대기, 0/3 완료) (`docs/todo/05_offline_queue.md`)
+- [ ] Edge Function 기반 API 계층화 (대기, 0/4 완료) (`docs/todo/06_edge_function_api_layer.md`)
+
+## P4 (플랫폼 확장)
+- [ ] iOS 출시 절차 및 Apple 로그인 기능 정의/구현 (`docs/todo/07_ios_release_apple_login.md`)
 
 ## 메모
 - 기준 문서는 `docs/context/01_project_state.md`

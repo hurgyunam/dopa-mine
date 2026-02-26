@@ -18,15 +18,16 @@
 - [x] Flutter 저장 계층 설계안 문서화 (`repository` 추상화, `infrastructure` 구현, DTO 변환 책임) (`docs/architecture/04_persistence_design.md`)
 
 ## 진행 중/예정 (MVP)
-- [ ] 세션 저장 API 연결 구현 (`create`/`save repetition`/`complete`)
-- [ ] 저장 실패 에러 분류표 작성 (MVP 범위: 네트워크/인증 만료/권한/스키마 불일치)
-- [ ] `workout_provider` 기준 저장 상태 모델 정의 (`idle/saving/saved/error`, 사용자 메시지 정책)
-- [ ] QA 체크리스트 작성 (MVP 범위: 정상 저장, 중복 저장 방지, 재로그인 후 동기화)
+- [ ] 로그인 선행 의존 항목으로 `docs/todo/02_social_login.md`의 `01_supabase_persistence 연계 이관 TODO` 섹션으로 이동함
 
 ## 후속(별도 에픽 연계)
 - 오프라인 큐/재동기화는 `docs/todo/05_offline_queue.md`에서 관리한다.
+- Edge Function 기반 별도 API 계층 구성은 `docs/todo/06_edge_function_api_layer.md`에서 P3로 관리한다.
 
 ## 변경 이력
 | 날짜 | 변경 요약 | 작성자 |
 | --- | --- | --- |
+| 2026-02-26 | 남은 MVP TODO를 소셜 로그인 선행 작업(`docs/todo/02_social_login.md`)으로 이관 | @cursor-agent |
+| 2026-02-26 | `세션 저장 API 연결 구현` 항목에 Supabase 초보자용 상세 절차와 구현 산출물 체크리스트 추가 | @cursor-agent |
+| 2026-02-26 | MVP 범위를 Supabase 자동 REST/RPC로 고정하고 Edge Function API 계층 이슈를 P3로 분리 | @cursor-agent |
 | 2026-02-26 | 기존 `docs/TODO.md`의 Supabase 저장 상세 체크리스트 분리 | @cursor-agent |
