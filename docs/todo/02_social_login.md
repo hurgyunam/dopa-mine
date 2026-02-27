@@ -14,7 +14,7 @@
 ## 상세 TODO
 - [x] 지원할 소셜 로그인 플랫폼 확정 (1차 릴리즈: Google 전용)
 - [x] 인증 서비스 및 로그인 구현 방식 확정 (Supabase Auth만 사용, Next.js 웹뷰로 OAuth 처리하는 방식은 사용하지 않음)
-- [ ] `docs/architecture/01_api_design.md`에 인증 플로우 시퀀스 추가 (앱 시작/로그인/토큰 갱신/로그아웃)
+- [x] `docs/architecture/02_auth_flow.md`에 인증 플로우 시퀀스 추가 (앱 시작/로그인/토큰 갱신/로그아웃)
 - [ ] Supabase Auth 연동 방식 확정 (OAuth redirect, deep link callback 처리)
 - [ ] Supabase `Authentication > URL Configuration` 값 확정 (`Site URL` 임시값, `Redirect URLs` 실제 앱 콜백 등록)
 - [ ] 소셜 로그인 콜백 딥링크 규격 확정 (`<scheme>://<host>`), 환경별(dev/prod) 네이밍 규칙 정의
@@ -53,6 +53,7 @@
 ## 변경 이력
 | 날짜 | 변경 요약 | 작성자 |
 | --- | --- | --- |
+| 2026-02-27 | 인증 플로우 시퀀스 작업 완료 (`docs/architecture/02_auth_flow.md` 분리) | @cursor-agent |
 | 2026-02-27 | 지원 로그인 제공자 범위 확정 섹션 추가 (1차: Google 전용), 관련 문서 동기화 | @cursor-agent |
 | 2026-02-26 | P4(iOS + Apple) 항목을 별도 문서(`docs/todo/07_ios_release_apple_login.md`)로 분리 | @cursor-agent |
 | 2026-02-26 | P1 범위를 Android + Google 로그인으로 고정하고 iOS/Apple 항목을 P4로 분리 | @cursor-agent |

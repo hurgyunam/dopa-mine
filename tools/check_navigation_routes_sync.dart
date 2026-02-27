@@ -1,6 +1,6 @@
 import 'dart:io';
 
-const String kNavigationDocPath = 'docs/architecture/03_navigation_routes.md';
+const String kNavigationDocPath = 'docs/architecture/05_navigation_routes.md';
 const List<String> kRouteRelatedPrefixes = <String>[
   'app_flutter/lib/screens/',
   'app_flutter/lib/navigation/',

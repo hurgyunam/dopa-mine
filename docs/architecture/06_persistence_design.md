@@ -116,10 +116,12 @@ abstract interface class SessionRepository {
 
 ## 9) 연계 문서
 - `docs/architecture/01_api_design.md`
+- `docs/architecture/03_session_save_flow.md`
 - `docs/product/03_core_spec.md`
-- `docs/architecture/02_env_policy.md`
+- `docs/architecture/04_env_policy.md`
 
 ## 변경 이력
 | 날짜 | 변경 요약 | 작성자 |
 | --- | --- | --- |
+| 2026-02-27 | 파일명 `04_persistence_design` → `06_persistence_design` 변경, 연계 문서 경로 정리 | @cursor-agent |
 | 2026-02-26 | Flutter 저장 계층 설계안 초안 신설 (`repository`/`infrastructure`/DTO/오류/테스트 포인트) | @cursor-agent |

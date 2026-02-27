@@ -44,4 +44,5 @@ Supabase 연동 시 로컬/배포 환경 변수 분리 기준을 정의한다.
 ## 변경 이력
 | 날짜 | 변경 요약 | 작성자 |
 | --- | --- | --- |
+| 2026-02-27 | 파일명 `02_env_policy` → `04_env_policy` 변경 (architecture 우선순위 정렬) | @cursor-agent |
 | 2026-02-26 | Supabase 로컬/배포 환경 변수 분리 정책 초안 작성 | @cursor-agent |

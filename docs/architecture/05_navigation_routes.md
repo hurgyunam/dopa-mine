@@ -12,7 +12,7 @@
 
 ## 2) 라우트 문서 자동 동기화 정책
 - 라우트 추가/삭제/변경이 발생하면 같은 작업에서 이 문서를 반드시 함께 수정한다.
-- PR(또는 커밋) 완료 조건에 `03_navigation_routes.md 반영`을 포함한다.
+- PR(또는 커밋) 완료 조건에 `05_navigation_routes.md 반영`을 포함한다.
 - 반영 누락 시 코드 작업은 완료로 간주하지 않는다.
 - 자동 검증 스크립트(`tools/check_navigation_routes_sync.dart`)를 커밋 전에 실행한다.
 
@@ -53,6 +53,7 @@ make nav-check
 ## 변경 이력
 | 날짜 | 변경 요약 | 작성자 |
 | --- | --- | --- |
+| 2026-02-27 | 파일명 `03_navigation_routes` → `05_navigation_routes` 변경 (architecture 우선순위 정렬) | @cursor-agent |
 | 2026-02-26 | pre-commit 실행 최소 구성으로 정리하고 훅 설치 전용 스크립트 참조를 제거 | @owner |
 | 2026-02-26 | 훅 설치 로직을 Dart 단일 스크립트로 통합하고 OS별 래퍼는 Dart 호출만 수행하도록 정리 | @owner |
 | 2026-02-24 | macOS/Linux 훅 설치 스크립트 및 Makefile 실행 경로 추가, Dart 선택 기준 명시 | @owner |
