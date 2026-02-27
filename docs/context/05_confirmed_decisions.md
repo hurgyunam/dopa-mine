@@ -11,7 +11,7 @@ TODO·아키텍처 문서에서 **방식 확정**, **정책 확정** 등으로 �
 | 지원 소셜 로그인 플랫폼 (1차)  | Google 전용. Apple/Kakao 등은 후속(`docs/todo/07_ios_release_apple_login.md`) | `docs/todo/02_social_login.md`             |
 | 인증 서비스·구현 방식        | Supabase Auth만 사용. Next.js 웹뷰로 OAuth 처리하는 방식은 사용하지 않음                   | `docs/todo/02_social_login.md`             |
 | Supabase Auth 연동 방식 | OAuth redirect 후 앱이 **커스텀 스킴 딥링크**로 콜백 수신                               | `docs/architecture/02_auth_flow.md` 2) 로그인 |
-| 소셜 로그인 콜백 딥링크 스킴 | 역도메인 `com.heokyunam.dopamine`, URL 예: `com.heokyunam.dopamine://auth/callback` | `docs/todo/02_social_login.md` §소셜 로그인 콜백 딥링크 규격, 루트 `README.md` §앱 식별 |
+| 소셜 로그인 콜백 딥링크 스킴 | 환경별 스킴(안 B): dev `com.heokyunam.dopamine.dev://auth/callback`, prod `com.heokyunam.dopamine://auth/callback` | `docs/todo/02_social_login.md` §소셜 로그인 콜백 딥링크 규격 (확정), 루트 `README.md` §앱 식별 |
 | 세션/토큰 저장 정책 | secure storage 사용, 만료 시 refresh 우선·실패 시 토큰 삭제 후 로그인 유도 | `docs/todo/02_social_login.md` §세션/토큰 저장 정책 |
 | 사용자 프로필 최소 스키마 | `id`, `email`, `provider`, `created_at` | `docs/todo/02_social_login.md` §사용자 프로필 최소 스키마 |
 
@@ -71,6 +71,7 @@ TODO·아키텍처 문서에서 **방식 확정**, **정책 확정** 등으로 �
 
 | 날짜         | 변경 요약                               | 작성자           |
 | ---------- | ----------------------------------- | ------------- |
+| 2026-02-27 | 소셜 로그인 콜백 딥링크 환경별 스킴(안 B) 확정 반영 — dev/prod 스킴 분리 | @cursor-agent |
 | 2026-02-27 | 소셜 로그인 콜백 딥링크 스킴(역도메인 com.heokyunam.dopamine) 확정 항목 추가 | @cursor-agent |
 | 2026-02-27 | 소셜 로그인 확정 항목 2건 추가 (세션/토큰 저장 정책, 사용자 프로필 최소 스키마) | @cursor-agent |
 | 2026-02-27 | 확정 이슈 모음 문서 신설 (인증·API·저장·환경·문서 운영) | @cursor-agent |

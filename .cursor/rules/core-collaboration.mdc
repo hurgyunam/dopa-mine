@@ -16,6 +16,7 @@ alwaysApply: true
 
 ## Docs Reference
 - 작업 시작 시 `docs` 전체를 읽지 않고 `docs/README.md`부터 확인한다.
+- **구현 상태·아키텍처 전환·다음 단계·우선순위** 관련 작업/질의 시 `docs/context/01_project_state.md`를 우선 확인한다. (현재 단계·As-Is/To-Be·점진 전환 정책에 맞는 제안을 위해 필요)
 - 1차 탐색은 관련 문서 2~3개로 제한하고, 부족할 때만 1개씩 추가 확인한다.
 - 프로젝트의 개발 실행 규칙은 `.cursor/rules/*.mdc`를 우선 적용한다.
 - `docs/rules/`는 문서 작성/운영 규칙으로만 취급한다.

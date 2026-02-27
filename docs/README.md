@@ -11,7 +11,7 @@
 - `docs/README.md`: 문서 인덱스와 우선순위
 - `docs/TODO.md`: 문서 정비 작업 목록
 - `docs/todo/`: 에픽별 상세 TODO (`01_supabase_persistence.md`, `02_social_login.md`, `07_ios_release_apple_login.md` 등)
-- `docs/context/`: 프로젝트 상태/완료 기준/도구 인벤토리/확정 이슈 (`01_project_state.md`, `02_done_definition.md`, `03_tools_inventory.md`, `05_confirmed_decisions.md`)
+- `docs/context/`: 프로젝트 상태/완료 기준/도구 인벤토리/확정 이슈/사전 점검 절차 (`01_project_state.md`, `02_done_definition.md`, `03_tools_inventory.md`, `05_confirmed_decisions.md`, `06_pre_release_checks.md`)
 - `docs/product/`: 용어 표준, 유스케이스, 도메인 스펙, 도메인 해설
 - `docs/design/`: UI/UX 가이드
 - `docs/architecture/`: API 및 시스템 설계 초안 (`01_api_design`, `02_auth_flow`, `03_session_save_flow`), 환경 변수 정책 (`04_env_policy`), 이동 루트 (`05_navigation_routes`), 저장 계층 설계 (`06_persistence_design`)
